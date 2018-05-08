@@ -14,6 +14,9 @@ $bigCity = [
 ];
 
 $sum = 0;
+$KF = 0;
+$TS = 0;
+
 print "<table>\n";
 for ($i = 0; $i <= count($bigCity) - 1; $i++){
   print "<tr>";
@@ -21,7 +24,16 @@ for ($i = 0; $i <= count($bigCity) - 1; $i++){
         print "<td>" . $bigCity[$i][$m] . "</td>";
     }
     $sum += $bigCity[$i][2];
+    if ($bigCity[$i][1] == "Калифорния"){
+        $KF += $bigCity[$i][2]; 
+    }
+    elseif ($bigCity[$i][1] == "Техас"){
+        $TS += $bigCity[$i][2]; 
+    }
    print "</tr>\n";
 }
-print "<tr><td>Total</td>" . "<td> --- </td>" . "<td>" . $sum . "<td></tr>\n"; 
+
+print "<tr><td>Калифорния</td>" . "<td> --- </td>" . "<td>" . $KF . "<td></tr>\n"; 
+print "<tr><td>Техас</td>" . "<td> --- </td>" . "<td>" . $TS . "<td></tr>\n"; 
+print "<tr><td>Total</td>" . "<td> --- </td>" . "<td>" . $sum . "<td></tr>\n";
 print "</table>";
