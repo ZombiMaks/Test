@@ -1,0 +1,31 @@
+#slider {
+    width: 128px;
+    height: 128px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 50px auto;
+    overflow: hidden; /*скрывает кортинки выходящие за блок*/
+}
+
+#polosa {
+  width: 896px;
+  position: relative;/* posr*/
+  left: 0;/*первая картинка без рывка*/
+  transition: all ease 1s; /*время передвижения слайдера*/
+}
+
+#polosa img {
+    float: left;
+}
+
+#polosa::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+button {
+    padding: 10px 40px;
+    font-size: 20px;
+    margin-left: 40px;
+    border-radius: 15px;   
+}

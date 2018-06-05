@@ -1,0 +1,16 @@
+#myslider {
+    width: 1200px;
+    height: 1080px;
+    border: 2px solid red;
+    position: relative;
+    overflow: hidden;/*обрезает все, что вылазит за блок*/
+}
+
+#one, #two {
+    width: 1200px;
+    height: 1080px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  overflow: hidden;/*обрезает все, что вылазит за блок*/
+}
